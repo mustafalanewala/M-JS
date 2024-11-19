@@ -2,7 +2,8 @@
 // - "use strict"; Treat all js code as newer version
 // - JavaScript is dynamically typed, meaning variables can hold different types of values
 // - The 'typeof' operator is used to determine the type of a value
-// - Objects, arrays, and functions are reference types, while others are primitive types
+// - 7 Primitive Datatypes = String, Number, Boolean, null, undefined, Symbol, BigInt
+// - 3 Reference or Non-Primitive Datatypes = Array, Objects, Functions
 // - Primitive types are immutable and compared by value
 // - Reference types are mutable and compared by reference
 
@@ -53,6 +54,12 @@ let person = {
 // Arrays are also objects
 let fruits = ["apple", "banana", "orange"];
 // Array methods: push(), pop(), shift(), unshift(), slice(), splice(), etc.
+
+// Functions 
+const myFunction = function(){
+  console.log("This is a function");
+}
+console.log(typeof myFunction)
 
 // Checking types
 console.log(typeof age);            // "number"
