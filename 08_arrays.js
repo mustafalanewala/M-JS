@@ -7,6 +7,10 @@
 // - Methods like map, filter, and concat create new arrays without modifying the original.
 // - The 'join' method is useful for creating strings from array elements.
 // - Arrays in JavaScript are objects and can have properties and methods added to them.
+// - The 'flat' method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+// - The 'isArray' method checks if a value is an array.
+// - The 'from' method creates a new array instance from an array-like or iterable object.
+// - The 'of' method creates a new array instance with a variable number of arguments, regardless of number or type of the arguments.
 
 // Array declaration
 const myArr = [1, 2, 3, 4, 5, 6]
@@ -17,7 +21,9 @@ const mixedArray = [1, "two", true, null, {name: "object"}, [1, 2, 3]]
 const myArr2 = new Array(1, 2, 3, 4)
 
 // Accessing elements
+console.log(myArr)
 console.log(Heros)
+console.log(mixedArray)
 console.log(myArr[1])  
 console.log(Heros[3]) 
 
@@ -66,3 +72,36 @@ console.log("After splice:", myArr)
 // Reverse: Reverses the array in place
 myArr.reverse()
 console.log("Reversed Array:", myArr)
+
+// Marvel and DC heroes arrays
+const marvelHeroes = ["IronMan", "Hulk", "Thor", "Spider-Man"]
+const dcHeroes = ["Batman", "Superman", "Wonder Woman", "Flash"]
+
+// Concat method
+const allHeroesConcat = marvelHeroes.concat(dcHeroes)
+console.log("All Heroes (Concat):", allHeroesConcat)
+
+// Spread operator
+const allHeroesSpread = [...marvelHeroes, ...dcHeroes]
+console.log("All Heroes (Spread):", allHeroesSpread)
+
+// Nested array for flat method
+const nestedArray = [1, 2, [3, 4, [5, 6]]]
+const flatArray = nestedArray.flat(2)
+console.log("Flat Array:", flatArray)
+
+// isArray method
+console.log("Is marvelHeroes an array?", Array.isArray(marvelHeroes))
+console.log("Is mixedArray an array?", Array.isArray(mixedArray))
+
+// from method
+const string = "Mustafa"
+const arrayFromString = Array.from(string)
+console.log("Array from String:", arrayFromString)
+console.log(Array.from({name: "Mustafa"})) // we need to define we want to make key or value array
+
+// of method
+let score1 = 100
+let score2 = 200
+let score3 = 300 
+console.log(Array.of(score1, score2, score3))
