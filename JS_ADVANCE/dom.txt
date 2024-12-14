@@ -1,0 +1,15 @@
+DOM is a programming interface for HTML and XML documents. It represents the page as a tree structure where each node is an object.
+
+DOM Tree Structure:
+Root node: <html>
+Children: <head> and <body>
+Sub-children: Tags inside <head> and <body>.
+
+Node Types:
+Element nodes: Represent HTML tags like <div>, <p>, etc.
+Text nodes: Represent the content inside tags.
+Attribute nodes: Represent attributes like id, class, src.
+
+For Traversing Use .parentNode, .childNodes, .firstChild, .lastChild, .nextSibling, and .previousSibling to navigate the DOM.
+
+Avoid direct DOM manipulation when using libraries like React or Vue.
