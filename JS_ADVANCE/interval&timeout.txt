@@ -1,0 +1,11 @@
+Start Interval: Begins a repeating task that logs a message every 2 seconds.
+Stop Interval: Stops the repeating task when no longer needed.
+Start Timeout: Schedules a one-time log to appear after 5 seconds.
+Cancel Timeout: Cancels the scheduled one-time log before it executes.
+
+Use Case To Understand Better
+setInterval: Imagine a school bell that rings every hour. The bell automatically rings at regular intervals (e.g., every hour). If you 
+disable the bell system, it stops ringing (like clearInterval).
+
+setTimeout: Imagine setting an alarm for 5 minutes. Once the alarm rings, it won’t repeat unless you manually reset it. If you cancel the 
+alarm before it rings, it won’t make any sound (like clearTimeout).
