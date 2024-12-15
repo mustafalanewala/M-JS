@@ -1,0 +1,24 @@
+An event is an action that happens in the browser, such as a user clicking a button, typing in an input field, or hovering over an element.
+Events can be triggered by user actions, like mouse clicks, keyboard input, or programmatically using JavaScript.
+
+Event Listener: Use addEventListener() to bind events to elements.
+
+Event Object: Provides properties like type, target, timestamp, defaultPrevented.
+
+Event Types :
+Mouse Events: click, dblclick, mouseover, mouseout, mousemove
+Keyboard Events: keydown, keyup, keypress
+Focus Events: focus, blur
+Form Events: submit, change, input, reset
+Window Events: load, resize, scroll
+Touch Events: touchstart, touchend, touchmove
+
+Event Propagation:
+Bubbling: Events propagate from the target element up.
+Capturing: Events propagate from root down (use true in addEventListener).
+
+Event Delegation: Attach a single listener to a parent element to handle child elements' events.
+
+Stop Propagation: Use event.stopPropagation() to stop events from bubbling or capturing.
+
+Throttling/Debouncing: Techniques to limit the frequency of event handler executions.
