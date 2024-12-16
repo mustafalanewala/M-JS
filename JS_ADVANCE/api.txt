@@ -1,0 +1,17 @@
+API (Application Programming Interface) requests allow communication between client-side JavaScript applications and back-end services.
+
+Types of API Requests:
+GET: Retrieve data from the server.
+POST: Send data to the server to create a resource.
+PUT: Update an existing resource on the server.
+DELETE: Remove a resource from the server.
+
+Making API Requests:
+There are two primary ways to make API requests in JavaScript:
+
+Using fetch:
+The fetch API is built into modern browsers and is used to make network requests.
+
+Using Axios:
+Axios is a popular third-party library for making HTTP requests. It simplifies the syntax and provides additional features.
+ 

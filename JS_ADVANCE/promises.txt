@@ -1,0 +1,6 @@
+Promises are objects that represent the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+States of a Promise:
+Pending: The initial state, neither fulfilled nor rejected.
+Fulfilled: The operation completed successfully, and the promise now has a resolved value.
+Rejected: The operation failed, and the promise has a reason (error).
