@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API in JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        .card h2 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+        }
+
+        .card p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .card .stats {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .stats div {
+            font-size: 0.9rem;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card" id="profileCard">
+        <img id="avatar" src="" alt="Avatar">
+        <h2 id="name">Loading...</h2>
+        <div class="stats">
+            <div>
+                <strong id="followers">0</strong>
+                <p>Followers</p>
+            </div>
+            <div>
+                <strong id="repos">0</strong>
+                <p>Repositories</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const requestUrl = 'https://api.github.com/users/mustafalanewala';
+        const xhr = new XMLHttpRequest();
+        const avatarElement = document.getElementById('avatar');
+        const nameElement = document.getElementById('name');
+        const followersElement = document.getElementById('followers');
+        const reposElement = document.getElementById('repos');
+
+        xhr.open('GET', requestUrl);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                const data = JSON.parse(xhr.responseText);
+
+                // Update the card with data from the API
+                avatarElement.src = data.avatar_url;
+                nameElement.textContent = data.name || data.login;
+                followersElement.textContent = data.followers;
+                reposElement.textContent = data.public_repos;
+            }
+        };
+        xhr.send();
+    </script>
+</body>
+
+</html>
