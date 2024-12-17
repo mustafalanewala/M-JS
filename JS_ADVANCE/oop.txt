@@ -1,0 +1,68 @@
+JavaScript Has a prototypal behavior
+Everything In JavaScript at the end is a object
+
+Here's what happens behind the scenes when the new keyword is used:
+A new object is created: The new keyword initiates the creation of a new JavaScript object.
+A prototype is linked: The newly created object gets linked to the prototype property of the constructor function. This means that it has access to properties and methods defined on the constructor's prototype.
+The constructor is called: The constructor function is called with the specified arguments and this is bound to the newly created object. If no explicit return value is specified from the constructor, JavaScript assumes this, the newly created object, to be the intended return value.
+The new object is returned: After the constructor function has been called, if it doesn't return a non-primitive value (object, array, function, etc.), the newly created object is returned.
+
+1. Object Literals:
+- Object literals are a simple way to define and create objects.
+- You can store properties and methods inside an object.
+- `this` refers to the context in which the method is executed.
+
+2. Constructor Functions:
+- Constructor functions are used to create multiple instances of an object with the same structure.
+- The `new` keyword is used to create instances, and `this` refers to the current object.
+- If `new` is not used, it overrides the existing instance.
+
+3. Prototypes:
+- Every JavaScript function has a `prototype` property.
+- Methods added to the prototype can be inherited by instances of the function.
+- Inherited properties can be accessed through the `__proto__` property (older syntax).
+- `Object.setPrototypeOf` is used to set the prototype in modern syntax.
+
+4. Call Method:
+- `call` is a method that allows you to invoke a function with a specified `this` value and arguments.
+- It can be used to set the `this` context in a different function.
+
+5. Classes:
+- Classes are syntactic sugar over constructor functions.
+- Methods defined in classes are automatically added to the prototype.
+- Classes can be used for inheritance and to define methods.
+
+6. Inheritance:
+- Inheritance allows one class to inherit properties and methods from another class.
+- JavaScript supports inheritance using `extends` keyword for class-based inheritance.
+- Inherited methods can be accessed by child classes.
+
+7. Static Properties & Methods:
+- Static properties and methods belong to the class itself, not instances of the class.
+- Static properties and methods are accessed using the class name rather than an instance.
+
+8. Getters and Setters:
+- Getters and setters are used to define how properties should be accessed and modified.
+- Getters return the value of a property, and setters modify it.
+- They can be implemented using `Object.defineProperty` or within a class.
+
+9. Lexical Scoping:
+- Lexical scoping means that variables are resolved based on where they are defined in the code.
+- Inner functions can access variables in their outer functions.
+
+10. Closures:
+- A closure is a function that "remembers" its outer variables even after the outer function has finished executing.
+- Closures allow you to preserve data and state in functions.
+
+11. Encapsulation:
+- Encapsulation is the bundling of data and methods that operate on that data within a class.
+- Private properties and methods are used to hide implementation details and expose only necessary methods.
+- JavaScript's private properties can be defined using `#`.
+
+12. Polymorphism:
+- Polymorphism allows different classes to define methods with the same name but different implementations.
+- It enables the use of a common interface, and the method is overridden in the child class to provide specific behavior.
+
+13. Abstraction:
+- Abstraction hides the complexity of a system and exposes only essential features.
+- In JavaScript, you can use classes with abstract methods, throwing errors to enforce that child classes implement required methods.
